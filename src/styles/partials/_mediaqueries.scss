@@ -1,0 +1,380 @@
+// @media (max-width:1210px) {
+// 	h2 {
+// 		width:100%;
+// 		// border:1px solid red;
+// 	}
+
+// 	main .wrapper {
+// 		width:90%;
+// 	}
+// 	.doctors img {
+// 		top:10px;
+// 	}
+
+// 	p {
+// 		font-size:1.3rem;
+// 	}
+
+// 	button {
+// 		font-size:1.15rem;
+// 	}
+
+// 	article.Clens {
+// 		li {
+// 			font-size:1.4rem;
+// 		}
+// 	}
+
+// }
+
+// // SMALL DESKTO0P
+
+// @media (max-width:941px){
+
+// 	h2 {
+// 		width:100%;
+// 	}
+// 	main .wrapper {
+// 		width:100%;
+// 	}
+
+// 	button {
+// 		font-size:1rem;
+// 	}
+
+// 	footer .wrapper {
+// 		width:90%;
+// 	}
+
+// 	.doctors img {
+// 		top:0px;
+// 	}
+
+// }
+
+// @media (max-width:825px) {
+// 	article.about {
+// 		flex-direction:column-reverse;
+// 			p {
+// 				margin:20px 10px;
+// 			}
+// 	}
+
+// 	.about-right {
+// 		width:90%;
+// 	}
+// }
+
+// // TABLET 
+
+// @media (max-width:768px) {
+	
+// 	.menu {
+// 		display: none;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		right: 0;
+// 		height:90vh;
+// 		background: rgba(255,255,255,0.6);
+// 		color: white;
+// 		animation:fade-in 0.4s ease-in;
+// 	}
+
+// 	@keyframes fade-in {
+// 		0% {
+// 			opacity:0;
+// 		}
+
+// 		100% {
+// 			opacity:1;
+// 		}
+// 	}
+
+// 	.hamburger, .exit-responsive {
+// 		display: block;
+// 		position:absolute;
+// 		top:0;
+// 		left:20px;
+// 		font-size: 25px;
+// 	}
+
+// 	.exit-responsive {
+// 		top:25px;
+// 	}
+
+// 	.hamburger,.exit-responsive {
+// 		display:block;
+// 		color:$primary;
+// 	}	
+
+// 	.circle {
+// 		width:125px;
+// 		height:125px;
+// 		display:flex;
+// 		margin:10px auto;
+// 		// border:1px dotted $soft;
+// 			i {
+// 				font-size:5.5rem;
+// 				color:$primary;
+// 			}
+// 	}
+
+// 	.front {
+// 		background:rgba(255,255,255,0.8);
+// 	}
+	
+// 	.submenu {
+// 		top:125px;
+// 		right:160px;
+// 			.sub-circle {
+// 				width:100%;
+// 				height:100%;
+// 				opacity:0;
+// 				transition:opacity 0.3s ease-in-out;
+// 			}
+// 	}
+
+// 	.sub-circle.show {
+// 		opacity:1;
+
+// 	}
+
+// 	.circle:last-child {
+// 		display:flex;
+// 	}
+	
+// 	header {
+// 		background-position:0;
+// 		text-align:center;
+// 			ul {
+// 				display:flex;
+// 				flex-flow:row wrap;
+// 				width:70%;
+// 				text-align:center;
+// 				margin:20px auto;
+// 				padding:50px;
+// 					a {
+// 						font-size:2rem;
+// 					}
+// 			}
+// 	}
+
+// 	article.Clens {
+// 		flex-direction:column;
+		
+// 	}
+
+// 	article.Clens > .lens-half {
+// 		width:100%;
+// 	}
+
+// 	.lens-half.one {
+// 		background:white;
+// 	}
+
+
+// 	.quarter {
+// 		width:100%;
+// 		display:flex;
+// 		justify-content:center;
+// 	}
+
+// 	.quarter:nth-of-type(1) {
+// 		display:flex;
+// 		justify-content:center;
+// 	}
+// 	.quarter:nth-of-type(2), .quarter:nth-of-type(3) {
+// 		padding-left:0;
+// 		width:50%;
+// 	}
+
+// 	.quarter:nth-of-type(3) {
+// 		flex-direction:column;
+// 		width:40%;
+// 	}
+
+// 	h2 {
+// 		width:200px;
+// 	}
+
+// 	h3 {
+// 		font-size:2.25rem;
+// 	}
+
+// 	.quarter:nth-of-type(4) {
+// 		flex-direction:row;
+// 	}
+
+// 	button {
+// 		width:50%;
+// 		margin:10px 7px;
+// 	}
+
+// }
+
+// @media (max-width:640px) {
+
+// 	header {
+// 		height:70vh;
+// 			ul {
+// 				width:100%;
+// 			}
+// 	}
+
+// 	.menu {
+// 		height:70vh;
+// 	}
+
+// 	.submenu {
+// 		top:115px;
+// 		right:190px;
+// 	}
+
+// 	figure {
+// 		flex-direction:column;
+// 		max-height:700px;
+// 		margin-top:75px;
+// 			img {
+// 				width:100%;
+
+// 			}
+// 	}
+
+// 	input[type="checkbox"]:checked + article.doctors {
+// 		height:850px;
+// 		// border:1px solid red;
+// 	}
+
+// 	figcaption {
+// 		background:rgba(255,255,255,0.6); 
+// 		width:100%;
+// 		position:absolute;
+// 		bottom:0;
+// 		padding:10px 20px;
+// 		// display:none;
+// 		margin:3% auto;
+// 		border-top:1px dotted $secondary;
+// 		border-bottom:1px dotted $secondary;
+// 			p {
+// 				color:black;
+// 			}
+// 	}
+
+// 	h4 {
+// 		color:$accentdark;
+// 	}
+
+// 	h5 {
+// 		color:$primary;
+// 	}
+
+// 	main .wrapper { 
+// 		background:$soft;
+// 	}
+
+// 	.doctors {
+// 		flex-direction:column;
+// 		color:white;
+// 			a {
+// 				padding:0 0 2px 0;
+// 				margin:0;
+// 				display:block;
+// 				width:100%;
+// 				color:white;
+// 			}
+// 			a:hover {
+// 				background:$accent;
+// 				color:white;
+// 				text-decoration:none;
+// 			}
+// 	}
+
+// }
+
+
+
+// @media (max-width:555px) {
+// 	input[type="checkbox"]:checked + article.doctors {
+// 		height:800px;
+// 		// border:1px solid red;
+// 	}
+
+// 	header{
+// 		background-position:center;
+// 	}
+
+// 	footer .wrapper, .quarter {
+// 		flex-direction:column;
+// 		align-items:center;
+// 		width:100%;
+// 	}
+
+// 	.quarter {
+// 		padding:0;
+// 		width:100%;
+// 	}
+	
+// 	.quarter:nth-of-type(2) {
+// 		// flex-flow:row wrap;
+// 		text-align:center;
+
+// 	}
+	
+// 	.quarter:nth-of-type(3) {
+// 		// flex-direction:row;
+// 		align-items:center;
+// 		margin-bottom:20px;
+// 		width:100%;
+// 		// border:1px solid red;
+// 	}
+
+// 	.quarter:nth-of-type(4) {
+// 		flex-direction:column;
+// 			button {
+// 				width:100%;
+// 				margin:2px;
+// 			}
+// 	}
+
+// 	h1 {
+// 		font-size:5rem;
+// 	}
+
+// 	h1::first-line {
+// 		font-size:5.5rem;
+// 	}
+
+// 	.circle {
+// 		width:100px;
+// 		height:100px;
+// 	}
+
+// 	h3 {
+// 		font-size:2rem;
+// 	}
+
+// 	.submenu {
+// 		top:95px;
+// 		right:160px;
+// 	}
+// }
+
+// @media (max-width:480px) {
+// 	input[type="checkbox"]:checked + article.doctors {
+// 		height:1000px;
+// 		// border:1px solid red;
+// 	}
+
+// 	figure {
+// 		max-height:none;
+// 			figcaption {
+// 				position:relative;
+// 				margin:0 auto;
+// 			}
+// 	}
+
+// 	.submenu {
+// 		right:150px;
+// 	}
+// }

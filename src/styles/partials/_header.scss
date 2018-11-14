@@ -1,0 +1,242 @@
+header {
+	background:radial-gradient(rgba(255,255,255,0.6), transparent), url(../../assets/DVAchart.jpg) no-repeat;
+	height:40vh;
+	background-attachment: fixed;
+	background-size:cover;
+	background-position-y:bottom -650px;
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	font-family:'Poppins', sans-serif;
+	@include breakPoint(firstBreak) {
+		background-position-y:bottom;
+	}
+	@include breakPoint(fourthBreak) {
+		background-position-x: center;
+		background-position-y: top -200px;
+	}
+	h1 {
+		margin-bottom:1.5rem;
+	}
+	h5 {
+		text-align: center;
+		background:$secondary;
+		width:55%;
+		margin:0 auto;
+		z-index: 5;
+	}
+}
+
+header ul {
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+	// border:1px solid red;
+	// width:100%;
+}
+
+ul {
+	list-style:none;
+	display:flex;
+	a {
+		text-decoration:none;
+		width:100%;
+		color:$tertiary;
+		text-align:center;
+		font-size:1.2rem;
+	}
+
+}
+
+
+h1 {
+	margin:50px auto;
+	font-size:6.5rem;
+	text-transform:lowercase;
+	// border:1px solid red;
+	width:60%;
+	text-align:center;
+	color:$secondary;
+	font-weight:400;
+	line-height:0.8;
+	text-shadow:1px 1px 1px $soft;
+	@include breakPoint(fourthBreak) {
+		font-size: 5rem;
+		width:60%;
+	}
+	@include breakPoint(sixthBreak) {
+		font-size:4.5rem;
+		width:75%;
+	}
+}
+
+h1::first-line {
+	color:$primary;
+	font-weight:700;
+	font-size:7rem;
+	@include breakPoint(fourthBreak) {
+		font-size: 5.5rem;
+	}
+	@include breakPoint(sixthBreak) {
+		font-size:5rem;
+	}
+}
+
+// NAV STYLES
+
+.circle {
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	position:relative;
+		i {
+			font-size:2.5rem;
+			color:#3d5ea1;
+		}
+}
+
+.front, .back {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  backface-visibility: hidden;
+  transition:transform 0.5s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.front {
+	background:rgba(255,255,255,0.5);
+	border-radius:50%;
+}
+
+.back {
+	background:rgba(0,0,0,0.2);
+	border-radius:50%;
+  	transform:rotateY(-180deg);
+}
+
+.circle:hover .main.front, .sub-circle:hover .sub.front{
+    transform:rotateY(180deg);
+}
+
+.circle:hover .main.back, .circle:active .main.front, .sub-circle:hover .sub.back, .circle:active .sub.front {
+  	transform:rotateY(0deg);
+}
+
+.circle:active .main.back,.sub-circle:active .sub.back {
+	transform:rotateY(-180deg);
+}
+
+.circle:last-child:hover ul{
+	// border:1px solid red;
+	opacity:1;
+	transition:opacity 0.3s;
+}
+
+.submenu {
+	opacity:0;
+	position:relative;
+	top:65px;
+}
+
+.sub-circle {
+	width:60px;
+	height:60px;
+}
+
+.sub.front,.sub.back {
+	// border:1px solid red;
+	backface-visibility: hidden;
+}
+
+// HAMBURGER MENU STYLES 
+
+.menuCircle {
+	@include breakPoint(fourthBreak) {
+		display:none;
+	}
+}
+.hamburger {
+	display:none;
+	@include breakPoint(fourthBreak) {
+		display:block;
+		background:none;
+		position: fixed;
+		top:1rem;
+		left:90%;
+		z-index: 10;
+		width:100%;
+		ul {
+			padding:3rem 0;
+			flex-direction: column;
+			li {
+				margin-bottom:1rem;
+				// font-size: 3rem;
+				background:none;
+			}
+			a {
+				font-size: 3rem;
+				line-break: 2;
+			}
+		}
+	}
+}
+
+.exit-responsive {
+	position: absolute;
+	top:1rem;
+	right:1rem;
+	font-size: 3rem;
+}
+
+.mobile-menu {
+	position: fixed;
+	top:0;
+	right:-100%;
+	width:100vw;
+	display:flex;
+	flex-direction: column;
+	background:white;
+	padding:3rem 0;
+	transition: right 1s;
+	z-index:20;
+	border-bottom:1px dotted $soft;
+	a {
+		font-size: 3rem;
+		line-height: 2;
+	}
+	li {
+		color:$soft;
+	}
+	a {
+		color:$soft;
+		&::after {
+			height: 2px;
+			background: $secondary;
+			content: '';
+			width: 0;
+			position: absolute;
+			transform: translateX(-50%);
+			transition: width 0.4s;
+			transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+			left: 50%;
+			margin-top: 5rem;
+			}
+			&:hover,
+			&:focus {
+			outline: none;
+			&:after {
+				width: 45%;
+			}
+		}
+	}
+}
+
+.mobile-menu.clicked {
+	right:0;
+}

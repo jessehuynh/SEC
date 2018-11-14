@@ -1,0 +1,313 @@
+main .wrapper {
+	margin:0 auto;
+	width:85%;
+	max-width:1300px;
+	display:flex;
+	flex-flow:column wrap;
+	// border:1px solid red;
+	@include breakPoint(secondBreak) {
+		width:95%;
+	}
+	@include breakPoint(thirdBreak) {
+		width:100%;
+	}
+}
+
+p {
+	font-size:1.8rem;
+	line-height:1.5;
+	color:$soft;
+}
+
+main a, footer a {
+	transition:all 0.25s;
+}
+
+img {
+	width:100%;
+	display:block;
+}
+
+// ABOUT 
+
+section.about, section.eyes, section.lenses {
+	margin:5rem auto;
+	.background {
+	// background:linear-gradient(rgba(255,197,144,0.3),rgba(255,197,144,0.3)), url(../../../assets/clinicwide.JPG) no-repeat;
+	background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url(../../../assets/box.png);
+	border:1px dotted lighten($soft, 50%);
+	background-size: contain;
+	// background-attachment: fixed;
+	width:85%;
+	margin:0 auto;
+	padding:3rem;
+	}
+	@include breakPoint(thirdBreak) {
+		.background {
+			padding:1rem;
+		}
+	}
+}
+
+section.eyes .background {
+    background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(../../../assets/Phoroptor.JPG) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.lenses .background {
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../../assets/contact.JPG) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+article.about, article.eyes, article.lenses {
+	// border:1px solid red;
+	background:white;
+	border:1px dotted lighten($soft, 30%);
+	width:100%;
+	margin:0 auto;
+	flex-direction:row-reverse;
+	align-items:center;
+	position: relative;
+	padding:2rem 4rem;
+
+		p {
+			margin-bottom:3rem;
+			// width:50%;
+		}
+		figure {
+			display:flex;
+			// border:1px solid red;
+		}
+
+}
+
+input[type="checkbox"] {
+	display:none;
+}
+
+// WHY
+
+section.why {
+	margin:5rem auto;
+	border-top:1px solid lighten($soft, 50%);
+	border-bottom:1px solid lighten($soft, 50%);
+	padding:5rem 0;
+	width:85%;
+	ul {
+		// border:1px solid red;
+		padding: 0;
+		width:100%;
+		margin:0 auto;
+		@include breakPoint(firstBreak) {
+			flex-direction: column;
+			& li:nth-of-type(2) {
+				border-top:1px dashed lighten($soft, 50%);
+				border-bottom: 1px dashed lighten($soft, 50%);
+			}
+		}
+		li {
+			// border:1px solid black;
+			width:33.3%;
+			text-align: center;
+			display:flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding:1rem;
+			@include breakPoint(firstBreak) {
+				width:80%;
+				margin:0 auto;
+			}
+			h4 {
+				// border:1px solid red;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// DOCTORS 
+section.doctors {
+	// border:1px solid red;
+	width:100%;
+	// height:75vh;
+	margin-bottom:5rem;
+	// position: relative;
+	// text-align: center;
+	// padding:3rem;
+
+}
+
+article.doctors-list {
+	// display:flex;
+	width:100%;
+}
+
+.doc {
+	display:none;
+	align-items:center;
+	// border:1px dotted $secondary;
+	background:white;
+	width:100%;
+	left:0;
+	margin:0 auto;
+	@include breakPoint(secondBreak) {
+		width:90%;
+	}
+		img {
+			width:25%;
+			height:auto;
+			@include breakPoint(secondBreak) {
+				display:none;
+			}
+		}
+}
+
+.doc.show {
+	display:flex;
+	// flex-direction: column;
+	// align-items:center;
+	justify-content: space-between;
+}
+
+article.doctors-list .background {
+	width:70%;
+	padding:3rem;
+	background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url(../../../assets/box.png);
+	border:1px dotted lighten($soft, 50%);
+	background-size: contain;
+	// background-attachment: fixed;
+	@include breakPoint(secondBreak) {
+		width:100%;
+	}
+	@include breakPoint(thirdBreak) {
+		padding:1rem;
+		margin-top:2rem;
+	}
+}
+figcaption {
+	width:100%;
+	padding:3rem;
+	border:1px dotted $secondary;
+	background:white;
+	// margin:2rem;
+	height:300px;
+	overflow-y: scroll;
+	p {
+			// font-size:1.6rem;
+			text-align:left;
+			margin:1rem auto;
+		}
+	@include breakPoint(secondBreak) {
+		height:inherit;
+		overflow-y: inherit;
+	}
+}
+
+.doc.open {
+	display:flex;
+}
+
+.doctors {
+	position:relative;
+	a {
+		text-decoration:none;
+		color:$primary;
+		padding:1rem; 
+		font-size:2rem;
+		max-height:40px;
+		cursor: pointer;
+		&::after {
+			height: 2px;
+			background: $secondary;
+			content: '';
+			width: 0;
+			position: absolute;
+			transform: translateX(-50%);
+			transition: width 0.4s;
+			transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+			left: 50%;
+			margin-top: 2rem;
+			}
+			&:hover,
+			&:focus {
+			outline: none;
+			&:after {
+				width: calc(100% - 20px);
+			}
+		}
+	}
+	ul {
+		margin-bottom:2rem;
+		// border:1px solid red;
+		display:flex;
+		flex-flow: row wrap;
+		padding:0;
+		justify-content: space-between;
+		@include breakPoint(firstBreak){
+			li {
+				// border:1px solid red;
+				text-align: center;
+				width:50%;
+			}
+		}
+	}
+	.doctors-top {
+		// border:1px solid cyan;
+		width:85%;
+		margin:0 auto;
+	}
+}
+
+
+
+input[type="checkbox"]:checked + article.doctors {
+	display:flex;
+	height:600px;
+	// border:1px solid red;
+}
+
+.first {
+	display:flex;
+}
+
+// LENSES
+
+section.lenses {
+	span {
+		color:$primary;
+	}
+	ul {
+		flex-direction: column;
+		margin:1rem 0;
+		width:80%;
+		li {
+			margin:1rem 0;
+			list-style:decimal;
+		}
+
+	}
+}
+
+// BRANDS
+
+.brands {
+    width:85%;
+    margin:3rem auto;
+    border-top:1px solid lighten($soft, 50%);
+    border-bottom:1px solid lighten($soft, 50%);
+	padding: 3rem 0;
+	display:flex;
+	flex-direction:column;
+    ul {
+        // border:1px solid pink;
+        width:80%;
+        margin: 0 auto;
+        padding:0;
+        li {
+            width:25%;
+            // border:1px solid red;
+        }
+    }
+}
