@@ -12,7 +12,7 @@
       @media (max-width:1150px) { @content;}
   }
   @if $point == thirdBreak {
-      @media (max-width:700px) { @content;}
+      @media (max-width:850px) { @content;}
   }
   @if $point == fourthBreak {
       @media (max-width:600px) {@content;}
